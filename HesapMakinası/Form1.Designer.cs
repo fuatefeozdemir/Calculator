@@ -46,10 +46,10 @@
             label1 = new Label();
             buttonResult = new Button();
             label2 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            buttonBackspace = new Button();
+            buttonClear = new Button();
+            buttonDot = new Button();
+            buttonMod = new Button();
             SuspendLayout();
             // 
             // buttonNumber7
@@ -216,51 +216,55 @@
             label2.ForeColor = Color.Silver;
             label2.Name = "label2";
             // 
-            // button1
+            // buttonBackspace
             // 
-            button1.BackColor = Color.FromArgb(50, 50, 50);
-            button1.FlatAppearance.BorderColor = Color.FromArgb(50, 50, 50);
-            resources.ApplyResources(button1, "button1");
-            button1.ForeColor = Color.White;
-            button1.Name = "button1";
-            button1.UseVisualStyleBackColor = false;
+            buttonBackspace.BackColor = Color.FromArgb(50, 50, 50);
+            buttonBackspace.FlatAppearance.BorderColor = Color.FromArgb(50, 50, 50);
+            resources.ApplyResources(buttonBackspace, "buttonBackspace");
+            buttonBackspace.ForeColor = Color.White;
+            buttonBackspace.Name = "buttonBackspace";
+            buttonBackspace.UseVisualStyleBackColor = false;
+            buttonBackspace.Click += buttonBackspace_Click;
             // 
-            // button2
+            // buttonClear
             // 
-            button2.BackColor = Color.FromArgb(50, 50, 50);
-            button2.FlatAppearance.BorderColor = Color.FromArgb(50, 50, 50);
-            resources.ApplyResources(button2, "button2");
-            button2.ForeColor = Color.White;
-            button2.Name = "button2";
-            button2.UseVisualStyleBackColor = false;
+            buttonClear.BackColor = Color.FromArgb(50, 50, 50);
+            buttonClear.FlatAppearance.BorderColor = Color.FromArgb(50, 50, 50);
+            resources.ApplyResources(buttonClear, "buttonClear");
+            buttonClear.ForeColor = Color.White;
+            buttonClear.Name = "buttonClear";
+            buttonClear.UseVisualStyleBackColor = false;
+            buttonClear.Click += buttonClear_Click;
             // 
-            // button3
+            // buttonDot
             // 
-            button3.BackColor = Color.FromArgb(59, 59, 59);
-            button3.FlatAppearance.BorderColor = Color.FromArgb(59, 59, 59);
-            resources.ApplyResources(button3, "button3");
-            button3.ForeColor = Color.White;
-            button3.Name = "button3";
-            button3.UseVisualStyleBackColor = false;
+            buttonDot.BackColor = Color.FromArgb(59, 59, 59);
+            buttonDot.FlatAppearance.BorderColor = Color.FromArgb(59, 59, 59);
+            resources.ApplyResources(buttonDot, "buttonDot");
+            buttonDot.ForeColor = Color.White;
+            buttonDot.Name = "buttonDot";
+            buttonDot.UseVisualStyleBackColor = false;
+            buttonDot.Click += buttonDot_Click;
             // 
-            // button4
+            // buttonMod
             // 
-            button4.BackColor = Color.FromArgb(50, 50, 50);
-            button4.FlatAppearance.BorderColor = Color.FromArgb(50, 50, 50);
-            resources.ApplyResources(button4, "button4");
-            button4.ForeColor = Color.White;
-            button4.Name = "button4";
-            button4.UseVisualStyleBackColor = false;
+            buttonMod.BackColor = Color.FromArgb(50, 50, 50);
+            buttonMod.FlatAppearance.BorderColor = Color.FromArgb(50, 50, 50);
+            resources.ApplyResources(buttonMod, "buttonMod");
+            buttonMod.ForeColor = Color.White;
+            buttonMod.Name = "buttonMod";
+            buttonMod.UseVisualStyleBackColor = false;
+            buttonMod.Click += buttonMod_Click;
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 32);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(buttonMod);
+            Controls.Add(buttonDot);
+            Controls.Add(buttonClear);
+            Controls.Add(buttonBackspace);
             Controls.Add(label2);
             Controls.Add(buttonResult);
             Controls.Add(label1);
@@ -302,9 +306,9 @@
         private Label label1;
         private Button buttonResult;
         private Label label2;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button buttonBackspace;
+        private Button buttonClear;
+        private Button buttonDot;
+        private Button buttonMod;
     }
 }

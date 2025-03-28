@@ -146,7 +146,22 @@ namespace HesapMakinası
             label2.Text += label1.Text + "-";
             isClearOn = true;
         }
-
+        
+        private void buttonMod_Click(object sender, EventArgs e)
+        {
+            if (number1 != 0)
+            {
+                buttonResult_Click(sender, new EventArgs());
+            }
+            if (isOperated)
+            {
+                label2.Text = "";
+            }
+            process = 5;
+            number1 = double.Parse(label1.Text);
+            label2.Text += label1.Text + "%";
+            isClearOn = true;
+        }
         private void buttonResult_Click(object sender, EventArgs e)
         {
             switch (process)
@@ -163,6 +178,9 @@ namespace HesapMakinası
                 case 4:
                     number1 -= double.Parse(label1.Text);
                     break;
+                case 5:
+                    number1 %= double.Parse(label1.Text);
+                    break;
                 default:
                     break;
             }
@@ -170,6 +188,35 @@ namespace HesapMakinası
             label1.Text = number1.ToString();
             number1 = 0;
             isOperated = true;
+            isClearOn = true;
         }
+
+        private void buttonBackspace_Click(object sender, EventArgs e)
+        {
+            checkFirst(sender, new EventArgs());
+
+            if (label1.Text.Length > 1)
+            {
+                label1.Text = label1.Text.Substring(0, (label1.Text.Length - 1));
+            }
+            else
+            {
+                label1.Text = "0";
+            }
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            label2.Text = "";
+            label1.Text = "0";
+        }
+
+        private void buttonDot_Click(object sender, EventArgs e)
+        {
+            checkFirst(sender, new EventArgs());
+            label1.Text += ",";
+        }
+
+       
     }
 }
