@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HesapMakinası.Properties {
+namespace Calculator.Properties {
     using System;
     
     
